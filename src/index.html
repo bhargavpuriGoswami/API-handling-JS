@@ -9,26 +9,30 @@
   <div class="w-full h-screen bg-gray-100 pt-8">
       <div class="bg-white p-3 max-w-md mx-auto rounded-2xl">
           <div class="text-center">
-              <h1 class="text-3xl font-bold">Task list</h1>
+              <h1 class="text-3xl font-bold">Weather</h1>
               <div class="mt-4 flex align-middle flex-row justify-between">
                   <input
-                      id="listInput"
+                      id="city-input"
                       class="w-80 pl-2 border-b-2 border-gray-500 text-black"
-                      type="text" placeholder="Enter your task here" 
+                      type="text" placeholder="Enter city name." 
                   />
                   <button
-                      id="addBtn"
-                      class="w-24 ml-2 border-2 border-green-500 p-2 text-green-500 hover:text-white hover:bg-green-500 rounded-lg flex justify-center"
-                  >   
-                      <svg class="h-6 w-6"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <circle cx="12" cy="12" r="9" />  <line x1="9" y1="12" x2="15" y2="12" />  <line x1="12" y1="9" x2="12" y2="15" /></svg>
-                      <span>Add</span>
+                        id="get-weather-btn"
+                        class="w-24 border-none ml-2 px-2 p-1 text-white bg-sky-500 hover:bg-sky-700 rounded-full flex justify-center"
+                  > 
+                        <svg width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M15.853 16.56c-1.683 1.517-3.911 2.44-6.353 2.44-5.243 0-9.5-4.257-9.5-9.5s4.257-9.5 9.5-9.5 9.5 4.257 9.5 9.5c0 2.442-.923 4.67-2.44 6.353l7.44 7.44-.707.707-7.44-7.44zm-6.353-15.56c4.691 0 8.5 3.809 8.5 8.5s-3.809 8.5-8.5 8.5-8.5-3.809-8.5-8.5 3.809-8.5 8.5-8.5z"/></svg>
+                        <span>Search</span>
                   </button>
               </div>        
           </div>
-          <div class="mt-8">
-              <ul id="taskList">
-              </ul>
+          <div id="weather-info" class="hidden">
+            <h2 id="city-name"></h2>
+            <p id="temperature"></p>
+            <p id="description"></p>
           </div>
+          <p id="error-message" class="hidden">
+            City not found. Please try again.
+          </p>
       </div>    
   </div>
   <script src="script.js"></script>
